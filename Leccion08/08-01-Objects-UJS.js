@@ -92,7 +92,7 @@ let persona3={
 
 let persona4 ={
     nombre: 'Julieta',
-    apellido: 'Bolaños'
+    apellido: 'Nieves'
 }
 
 console.log(persona3.nombreCompleto.call(persona4));
