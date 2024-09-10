@@ -27,3 +27,4 @@ console.log(persona1.nombre);
 // se agregó set a la clase Persona para modificar la propiedad nombre
 persona1.nombre = 'Jorge';//set nombre('Jorge')
 console.log(persona1.nombre);//get nombre
+
