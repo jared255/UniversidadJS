@@ -95,5 +95,12 @@ let persona4 ={
     nombre: 'Julieta',
     apellido: 'Nieves'
 }
-
+// Uso de call con parametros
 console.log(persona3.nombreCompleto.call(persona4,'Lic','70707070'));
+
+// Metodo apply en JavaScript
+// Similar a call pero los parametros se pasan en un array
+console.log(persona3.nombreCompleto("Ing: ","78965656")); 
+
+let arreglo = ['Ing: ','729256438'];
+console.log(persona3.nombreCompleto.apply(persona4,arreglo));
