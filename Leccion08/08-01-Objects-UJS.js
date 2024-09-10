@@ -85,8 +85,9 @@ console.log(madre.telf);
 let persona3={
     nombre : 'Rene',
     apellido: 'Gado',
-    nombreCompleto : function(){
-        return this.nombre +' '+ this.apellido;
+    // Puede o no tener parametros
+    nombreCompleto : function(titulo, telf){
+        return titulo +': '+ this.nombre +' '+ this.apellido+ ' '+ telf;
     }
 }
 
@@ -95,4 +96,4 @@ let persona4 ={
     apellido: 'Nieves'
 }
 
-console.log(persona3.nombreCompleto.call(persona4));
+console.log(persona3.nombreCompleto.call(persona4,'Lic','70707070'));
