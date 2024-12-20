@@ -9,7 +9,28 @@ class Persona {
   set nombre(nombre) {
     this._nombre = nombre;
   }
+  get apellido() {
+    return this._apellido;
+  }
+  set apellido(apellido) {
+    this._apellido = apellido;
+  }
+
+  nombreCompleto() {
+    return this.nombre + " " + this.apellido;
+  }
 }
+class Empleado extends Persona {
+  constructor(nombre, apellido, departamento) {
+    super(nombre, apellido);
+    this._departamento = departamento;
+  }
+  //Override
+  nombreCompleto() {
+    return super.nombreCompleto() + ", " + this._departamento;
+  }
+}
+
 // el constructor no se manda a llamar
 // sino que se ejecuta al instanciar la clase
 
@@ -22,13 +43,5 @@ let persona1 = {
 };
 console.log(persona1);
 
-let persona2 = {
-  nombre: "Carlos",
-  apellido: "Lara",
-};
-
-// Uso de apply
-console.log(persona1.nombreCompleto("Lic.", "5555-1234"));
-
-let arreglo = ["Ing.", "5555-4321"];
-console.log(persona1.nombreCompleto.apply(persona2, arreglo));
+let empleado1 = new Empleado("Rebeca", "Diaz", "Sistemas");
+console.log(empleado1.nombreCompleto());
